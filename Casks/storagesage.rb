@@ -1,10 +1,10 @@
 cask "storagesage" do
-  version "1.2.0"
-  sha256 "8bed6df38c4d920105bd7ce9b00ff6b070631e1cb542c71b769631d8d12c8a77"
+  version "1.3.0"
+  sha256 "97c38f06ab6e7056b8c45809b6f55721fb0e14e3bc4341ccf9574a78611c7380"
 
   url "https://github.com/StefanBoblic/StorageSage/releases/download/v#{version}/StorageSage-#{version}.zip"
   name "StorageSage"
-  desc "Analyze disk usage and safely clean developer caches"
+  desc "Analyze disk usage, track growth, and safely clean storage"
   homepage "https://github.com/StefanBoblic/StorageSage"
 
   depends_on arch: :arm64
@@ -14,8 +14,11 @@ cask "storagesage" do
 
   zap trash: [
     "~/Library/Caches/com.local.StorageSage",
+    "~/Library/Caches/com.stefanboblic.StorageSage",
     "~/Library/Preferences/com.local.StorageSage.plist",
+    "~/Library/Preferences/com.stefanboblic.StorageSage.plist",
     "~/Library/Saved Application State/com.local.StorageSage.savedState",
+    "~/Library/Saved Application State/com.stefanboblic.StorageSage.savedState",
   ]
 
   caveats <<~EOS
