@@ -1,6 +1,6 @@
 cask "storagesage" do
-  version "1.1.0"
-  sha256 "2776bc3a7085d7962af12c495696484a2bd29a71664b336a61cafece84a49c49"
+  version "1.2.0"
+  sha256 "8bed6df38c4d920105bd7ce9b00ff6b070631e1cb542c71b769631d8d12c8a77"
 
   url "https://github.com/StefanBoblic/StorageSage/releases/download/v#{version}/StorageSage-#{version}.zip"
   name "StorageSage"
