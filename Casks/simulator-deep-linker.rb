@@ -1,17 +1,21 @@
 cask "simulator-deep-linker" do
-  version "0.1.0"
-  sha256 "7bdc41a168ba16658ee51cf287de5d380d75b1b154b977a5e6f016c74eaa8b4d"
+  version "0.2.0"
+  sha256 "3e84451ea51ec1d77374bbdc71341ff88ac144dd01f257293b108750e08e33eb"
 
   url "https://github.com/StefanBoblic/SimulatorDeepLinker/releases/download/v#{version}/SimulatorDeepLinker-#{version}.zip"
   name "SimulatorDeepLinker"
-  desc "macOS utility for saving and opening deep links in iOS Simulator"
+  desc "Save and open deep links on iOS and Android developer devices"
   homepage "https://github.com/StefanBoblic/SimulatorDeepLinker"
+
+  depends_on :macos
 
   app "SimulatorDeepLinker.app"
 
   zap trash: [
-    "~/Library/Application Support/SimulatorDeepLinker",
+    "~/Library/Application Support/com.stefan.SimulatorDeepLinker",
     "~/Library/Application Support/com.stefanboblic.SimulatorDeepLinker",
+    "~/Library/Application Support/SimulatorDeepLinker",
+    "~/Library/Preferences/com.stefan.SimulatorDeepLinker.plist",
     "~/Library/Preferences/com.stefanboblic.SimulatorDeepLinker.plist",
   ]
 end
