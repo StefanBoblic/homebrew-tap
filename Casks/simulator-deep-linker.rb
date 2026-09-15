@@ -1,6 +1,6 @@
 cask "simulator-deep-linker" do
-  version "0.2.2"
-  sha256 "87c0444989978e3988c469df9fd01317c41901efbd82216f3074ec0ca73146d0"
+  version "0.2.3"
+  sha256 "fb5405bb8e89a16eb5ce03d2f96ee5232189f3d446226acbaed9297628212b7c"
 
   url "https://github.com/StefanBoblic/SimulatorDeepLinker/releases/download/v#{version}/SimulatorDeepLinker-#{version}.zip"
   name "SimulatorDeepLinker"
